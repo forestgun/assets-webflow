@@ -607,6 +607,12 @@
     // INICIALIZACIÓN PRINCIPAL
     // ============================================
     function init() {
+        // Comprobar si está habilitado
+        if (config.enabled === false) {
+            log('Videolitics desactivado (enabled: false)');
+            return;
+        }
+        
         log('Iniciando Videolitics para Webflow v2.1');
         log('Configuración:', config);
         
